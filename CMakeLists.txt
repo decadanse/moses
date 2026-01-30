@@ -88,10 +88,19 @@ SET(Boost_USE_STATIC_LIBS OFF)
 SET(Boost_USE_MULTITHREADED ON)
 
 # Required boost packages
+# packet libboost-all-dev Boost 1.83 is working fine
+# installation via sudo dpkg -i libboost-all-dev*.deb is working fine
+# verify matching Boost version with commands (there could be other version leftovers that would cause issues if not matching):
+#	grep BOOST_LIB_VERSION /usr/include.boost/version.hpp
+#	and
+#	strings /usr/lib/.../libboost_program_options.so | grep BOOST_LIB_VERSION
 FIND_PACKAGE(Boost 1.60 COMPONENTS date_time filesystem program_options regex serialization system thread REQUIRED)
 
 IF(Boost_FOUND)
 	SET(Boost_FOUND_SAVE 1)
+	SET(BOOST_ROOT "/usr")
+	SET(BOOST_INCLIDEDIR "/usr/include") # .hpp files
+	SET(BOOST_LIBRARYDIR "/usr/lib") # .so library files
 ELSE(Boost_FOUND)
 	MESSAGE(FATAL_ERROR "Boost 1.60 or newer is needed to build OpenCog!")
 ENDIF(Boost_FOUND)
