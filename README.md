@@ -56,6 +56,8 @@ few exceptions, most Linux distributions will provide these packages.
 ###### boost
 > C++ utilities package
 > http://www.boost.org/ | libboost-dev
+>
+> compatible version of sudo apt install libboost-all-dev is 1.88.0 or 1.83.0
 
 ###### cmake
 > Build management tool; v2.8 or higher recommended.
@@ -71,7 +73,7 @@ few exceptions, most Linux distributions will provide these packages.
 > http://github.com/opencog/cogutil
 >
 > use compatible version
-> https://github.com/decadanse/coguti
+> http://github.com/decadanse/coguti
 > 
 > It uses exactly the same build procedure as this package. Be sure
   to `sudo make install` at the end.

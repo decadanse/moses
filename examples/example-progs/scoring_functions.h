@@ -117,9 +117,9 @@ struct contin_uniform
         : fields(fs), target(fs.n_contin_fields())
     {
         generate(target.begin(), target.end(),
-                 bind(std::plus<contin_t>(),
-                      bind(std::multiplies<contin_t>(),
-                           bind(&RandGen::randdouble, boost::ref(randGen())),
+                 boost::bind(std::plus<contin_t>(),
+                      boost::bind(std::multiplies<contin_t>(),
+                           boost::bind(&RandGen::randdouble, boost::ref(randGen())),
                            maxval - minval), minval));
     }
 
