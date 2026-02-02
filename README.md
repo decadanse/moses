@@ -73,7 +73,7 @@ few exceptions, most Linux distributions will provide these packages.
 > http://github.com/opencog/cogutil
 >
 > use compatible version
-> http://github.com/decadanse/coguti
+> http://github.com/decadanse/cogutil
 > 
 > It uses exactly the same build procedure as this package. Be sure
   to `sudo make install` at the end.
